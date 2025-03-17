@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --fundo: #F8F4FF;
+    --texto: #464646;
+    --texto-cinza: #A3A3A3;
+    --button-primeiro: #FFB050;
+    --button-segundo: #ffff;
+    --button-terceiro: #4894FF;
+    --detalhes: #f6f6f6;
+    --fundo-card: #ffff;
+    --botao-flutuante: #4894FF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font-family: "Montserrat", sans-serif;
+
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--fundo);
+
+}
+
+header {
+    position: sticky; 
+    top: 0; 
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 1.5em 1.5em;
+    gap: 1.25em;
+    background-color: var(--fundo);
+    z-index: 100; 
+}
+
+.usuario {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+}
+
+.identificação {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nome-usuario {
+    color: var(--texto);
+    font-weight: 700;
+    font-size: 31px;
+}
+
+.informação-de-agenda {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--texto-cinza);
+}
+
+.agendamentos {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 50px;
+    margin: 20px;
+}
+
+.data {
+    padding: 10px 24px;
+    text-align: left;
+    background-color: #f5f7ff;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--fundo-card);
+    width: 370px;
+    height: 185px;
+    border-radius: 8px;
+}
+
+.foto-paciente {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+.card-consulta {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dados-paciente {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    position: relative;
+}
+
+.nome-paciente {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--texto);
+}
+
+.alinhar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.local-consulta {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--texto-cinza);
+}
+
+.chat {
+    width: 15px;
+    height: 15px;
+}
+
+.circulo {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    background-color: var(--detalhes);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    right: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+hr {
+    width: calc(100% + 40px);
+    height: 2px;
+    background-color: var(--detalhes);
+    border: none;
+    margin: 10px -20px;
+}
+
+.horario-tipo-de-consulta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.horarios {
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.primeiro-botão {
+    width: 172px;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--fundo-card);
+    background-color: var(--button-primeiro);
+    cursor: pointer;
+}
+
+.segunda-botão {
+    width: 172px;
+    height: 48px;
+    border: 2px solid var(--detalhes);
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--texto);
+    background-color: var(--button-segundo);
+    cursor: pointer;
+}
+
+.terceiro-botão {
+    width: 400px;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--button-segundo);
+    background-color: var(--button-terceiro);
+    cursor: pointer;
+}
+
+.menu_fixo {
+    position: sticky; 
+    bottom: 0;        
+    left: 0;
+    width: 100%;
+    height: 58px;
+    background-color: var(--fundo-card);
+    border-radius: 12px 12px 0 0;
+    filter: drop-shadow(0 -1px 3px #46464625);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 100; 
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.imagem-item {
+    width: 24px;
+    height: 24px;
+    filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg);
+}
+
+.titulo {
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--texto-cinza);
+}
+
+.menu_fixo li:hover .imagem-item {
+    filter: brightness(0) saturate(100%) invert(44%) sepia(92%) saturate(748%) hue-rotate(178deg) brightness(106%) contrast(101%); /* Cor azul para a imagem */
+}
+
+.menu_fixo li:hover .titulo {
+    color: #4894FF; 
+}
+
+
+
+/* Desafia do botão flutuante */
+
+.botao-flutuante {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--botao-flutuante);
+    color: white;
+    font-size: 32px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.botao-flutuante:hover {
+    transform: scale(1.1);
+}
+
+/* Esconde os botões adicionais inicialmente */
+.botoes-adicionais {
+    position: fixed;
+    bottom: 90px; 
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 102;
+}
+
+/* Botões adicionais */
+.botao-flutuante-localização, 
+.botao-flutuante-video {
+    width: 60px;
+    height: 60px;
+    background-color: var(--botao-flutuante);
+    color: white;
+    font-size: 32px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Quando o checkbox estiver marcado, os botões aparecerão */
+.botao-toggle:checked + .botao-flutuante + .sobreposicao {
+    opacity: 0.9; /* Escurece a tela */
+    visibility: visible;
+}
+
+.botao-toggle:checked + .botao-flutuante + .sobreposicao + .botoes-adicionais {
+    opacity: 1;
+    visibility: visible;
+    bottom: 150px; 
+}
+
+/* Efeito de hover nos botões adicionais */
+.botao-flutuante-localização:hover::after  {
+    transform: scale(1.1);
+    content: "Nova consulta na casa do paciente";
+    position: absolute;
+    top: 25%; 
+    left: -450%; 
+    transform: translateY(-50%); 
+    background-color: var(--fundo-card);
+    color: var(--texto);
+    padding: 2px 8px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap; 
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease; 
+}
+
+.botao-flutuante-video:hover::after  {
+    transform: scale(1.1);
+    content: "Nova consulta por vídeo";
+    position: absolute;
+    top: 80%; 
+    left: -330%; 
+    transform: translateY(-50%); 
+    background-color: var(--fundo-card);
+    color: var(--texto);
+    padding: 2px 8px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap; 
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease; 
+}
+
+/* Camada de sobreposição escura */
+.sobreposicao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 101; 
+}
+
+.botao-toggle {
+    display: none;
+}
