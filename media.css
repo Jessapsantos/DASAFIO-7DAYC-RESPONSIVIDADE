@@ -2,10 +2,14 @@
     
 
     .agendamentos {
-        display: flex;
-        flex-wrap: wrap; 
-        gap: 15px; 
-        margin: 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        margin: 0.625em;
+    }
+    
+    .cards {
+        padding: 0.9375em;
     }
 
 
@@ -14,10 +18,10 @@
 @media screen and (max-width: 430px) {
     
 
-    .cards {
-        width: calc(100vw - 40px); 
-        max-width: calc(100vw - 40px);
-        margin: 0 auto;
+    .agendamentos {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        margin: 0.625em;
     }
-
 }

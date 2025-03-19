@@ -41,8 +41,8 @@ header {
 }
 
 .usuario {
-    width: 96px;
-    height: 96px;
+    width: 6em;
+    height: 6em;
     border-radius: 50%;
 }
 
@@ -65,31 +65,28 @@ header {
 }
 
 .agendamentos {
-    display: flex;
-    flex-wrap: wrap;  
-    gap: 50px;
-    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+    gap: 1.25em; /* Espaçamento entre os cards */
+    margin: 1.25em;
 }
 
 .data {
-    padding: 10px 24px;
+    padding: 0.625em 1.5em;
     text-align: left;
     background-color: #f5f7ff;
 }
 
 .cards {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+    padding: 1.25em;
     background-color: var(--fundo-card);
-    width: 370px;
-    height: 185px;
-    border-radius: 8px;
+    border-radius: 0.5em;
+    width: 100%;
 }
 
 .foto-paciente {
-    width: 48px;
-    height: 48px;
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
     object-fit: cover; 
 }
@@ -97,20 +94,20 @@ header {
 .card-consulta {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.3125em;
 }
 
 .dados-paciente {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 0.9375em;
 
     position: relative;
 }
 
 .nome-paciente {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.125em;
     color: var(--texto);
 }
 
@@ -118,18 +115,18 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
+    gap: 0.3125em;
 }
 
 .local-consulta {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 0.75em;
     color: var(--texto-cinza);
 }
 
 .chat {
-    width: 15px;
-    height: 15px;
+    width: 0.9375em;
+    height: 0.9375em;
 }
 
 .circulo {
@@ -138,8 +135,8 @@ header {
     justify-content: center;
     background-color: var(--detalhes);
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
+    width: 2.1875em;
+    height: 2.1875em;
     right: 0;
     position: absolute;
     right: 0;
@@ -148,71 +145,72 @@ header {
 }
 
 hr {
-    width: calc(100% + 40px);
-    height: 2px;
+    width: calc(100% + 2.5em);
+    height: 0.125em;
     background-color: var(--detalhes);
     border: none;
-    margin: 10px -20px;
+    margin: 0.625em -1.25em;
 }
 
 .horario-tipo-de-consulta {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625em;
 }
 
 .horarios {
     color: var(--texto);
-    font-size: 14px;
+    font-size: 0.875em;
     font-weight: 500;
 }
 
 .button-container {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 1.25em;
+    width: 100%
 }
 
 .primeiro-botão {
-    width: 172px;
-    height: 48px;
-    border-radius: 8px;
-    font-size: 16px;
+    width: 100%;
+    height: 3em;
+    border-radius: 0.5em;
+    font-size: 1em;
     color: var(--fundo-card);
     background-color: var(--button-primeiro);
     cursor: pointer;
 }
 
 .segunda-botão {
-    width: 172px;
-    height: 48px;
-    border: 2px solid var(--detalhes);
-    border-radius: 8px;
-    font-size: 16px;
+    width: 100%;
+    height: 3em;
+    border: 0.125em solid var(--detalhes);
+    border-radius: 0.5em;
+    font-size: 1em;
     color: var(--texto);
     background-color: var(--button-segundo);
     cursor: pointer;
 }
 
 .terceiro-botão {
-    width: 400px;
-    height: 48px;
-    border-radius: 8px;
-    font-size: 16px;
+    width: 100%;
+    height: 3em;
+    border-radius: 0.5em;
+    font-size: 1em;
     color: var(--button-segundo);
     background-color: var(--button-terceiro);
     cursor: pointer;
 }
 
 .menu_fixo {
-    position: sticky; 
+    position: fixed;
     bottom: 0;        
     left: 0;
     width: 100%;
-    height: 58px;
+    height: 3.625em;
     background-color: var(--fundo-card);
-    border-radius: 12px 12px 0 0;
-    filter: drop-shadow(0 -1px 3px #46464625);
+    border-radius: 0.75em 0.75em 0 0;
+    filter: drop-shadow(0 -0.0625em 0.1875em #46464625);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -223,38 +221,36 @@ ul {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    gap: 40px;
+    gap: 2.5em;
 }
 
 li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 0.3125em;
     cursor: pointer;
 }
 
 .imagem-item {
-    width: 24px;
-    height: 24px;
+    width: 1.5em;
+    height: 1.5em;
     filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg);
 }
 
 .titulo {
-    font-size: 12px;
+    font-size: 0.75em;
     text-decoration: none;
     color: var(--texto-cinza);
 }
 
 .menu_fixo li:hover .imagem-item {
-    filter: brightness(0) saturate(100%) invert(44%) sepia(92%) saturate(748%) hue-rotate(178deg) brightness(106%) contrast(101%); /* Cor azul para a imagem */
+    filter: brightness(0) saturate(100%) invert(44%) sepia(92%) saturate(748%) hue-rotate(178deg) brightness(106%) contrast(101%);
 }
 
 .menu_fixo li:hover .titulo {
     color: #4894FF; 
 }
-
-
 
 /* Desafia do botão flutuante */
 
@@ -274,12 +270,7 @@ li {
     justify-content: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
     z-index: 1000;
-}
-
-.botao-flutuante:hover {
-    transform: scale(1.1);
 }
 
 /* Esconde os botões adicionais inicialmente */
